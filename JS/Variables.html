@@ -1,0 +1,76 @@
+<!-- Test JS - Hello JS -->
+<!DOCTYPE html>
+
+<head>
+<meta charset="utf-8">
+<title>Variables JS</title>
+</head>
+
+
+<!-- --- BODY --- -->
+<body>
+
+<div id="hello">
+<center><h2>Variables JS</h2></center>
+</div>
+
+
+<!-- FOOTER-->
+<footer>
+<div class="footer"></div>
+</footer>
+
+
+<!-- --- SCRIPT ---- -->
+<script>
+	var myVariable;
+	myVariable = 2;
+    document.write(myVariable); // Afficher var
+    document.write('<br />');
+
+	document.write('Texte'); //Afficher du texte 
+	document.write('<br />');
+
+
+    var text1 = "Mon premier texte"; // Avec des guillemets
+    var text2 = 'Mon deuxième texte'; // Avec des apostrophes 
+    document.write(text2); document.write('<br />');
+
+
+    var tableauDePrenoms = ["Paul", "Jack", "Bob", "Toto"];  // Tableaux
+    document.write(tableauDePrenoms); document.write('<br />');
+
+
+    
+    //  Les booléens (alias boolean) 
+    var isTrue = true; 
+    var isFalse = false;
+
+    var number = 2; 
+    // alert(typeof number); // Affiche : « number »  
+    var text = 'Mon texte'; 
+    // alert(typeof text); // Affiche : « string »  
+    var aBoolean = false; 
+    // alert(typeof aBoolean); // Affiche : « boolean » 
+
+
+    // Quelques calculs simples
+    var result = 3 + 2; 
+    document.write(result); // Affiche : « 5 » 
+    document.write('<br />');
+
+
+
+    // Convertir une chaîne de caractères en nombre 
+    var first, second, result;  
+    first = prompt('Entrez le premier chiffre :'); 
+    second = prompt('Entrez le second chiffre :'); 
+    result = parseInt(first) + parseInt(second);  
+    
+    alert(result); 
+
+
+</script>
+
+</body>
+</html>
