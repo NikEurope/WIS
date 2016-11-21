@@ -9,6 +9,8 @@
 
 // 2 L'héritage des propriétés et des méthodes
 
+
+
 // var query = document.querySelector('#menu .item span'),
 // queryAll = document.querySelectorAll('#menu .item span');
 // alert(query.innerHTML); // Affiche : "Élément 1"
@@ -33,6 +35,8 @@
 // document.getElementById('myColoredDiv').className = 'blue';
 // document.getElementById('orange').className = 'orange';
 // document.getElementById('myColoredDiv2').className = 'red1';
+
+
 
 
 
@@ -77,11 +81,39 @@
 
 // 7 Lister et parcourir des noeuds enfants
 
-var paragraph = document.getElementById('myP');
-var first = paragraph.firstChild;
-var last = paragraph.lastChild;
-alert(first.nodeName.toLowerCase());
-alert(last.nodeName.toLowerCase());
+// var paragraph = document.getElementById('myP');
+// var first = paragraph.firstChild;
+// var last = paragraph.lastChild;
+// alert(first.nodeName.toLowerCase());
+// alert(last.nodeName.toLowerCase());
+
+
+
+// 8 Création de l'élément
+
+ // Création de Lien
+
+// var newLink = document.createElement('a');
+
+// newLink.id = 'new_link';
+// newLink.href = 'http://www.google.com';
+// newLink.title = 'Google';
+
+
+// var myP = document.getElementById('myP');
+// myP.appendChild(newLink);
+
+// // Création de Texte
+
+// var newLinkText = document.createTextNode("Exemple de texte");
+// newLink.appendChild(newLinkText);
+
+
+
+
+
+
+
 
 
 
