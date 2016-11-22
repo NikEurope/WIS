@@ -6,14 +6,26 @@
 <title>Essai DHTML</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script type="text/javascript">
-<!--
-	
-	function change_enfants()
-		{
-			
 
+	function change_enfants(){
+
+			par=document.getElementById("par");
+			
+			par.firstChild.nodeValue="On change le texte plein d'enfants ";
+			
+			par.lastChild.width="100";
+			par.lastChild.height="55.5";
+			par.lastChild.border="4px solid";
+			par.lastChild.color="red";
 		
-		}		
+
+			par.childNodes[1].innerHTML="<font color='blue'>en bleu<"+"/font>";
+			
+			par.childNodes[3].style.display="block";
+
+			alert(par.childNodes.length);
+
+		}			
 	
 //-->
 </script>
@@ -21,7 +33,7 @@
 </head>
 <body>
 
-<p id="paragraphe" onclick="change_enfants()">Un texte avec plein d'enfants, <b>en gras</b>, <i>en italique</i>... et une image <img alt="Un dauphin" src="dauphin.jpg" height="111" width="200"></p>
+<p id="par" onclick="change_enfants()">Un texte avec plein d'enfants, <b>en gras</b>, <i>en italique</i>... et une image <img alt="Un dauphin" src="dauphin.jpg" height="111" width="200"></p>
 
 </body>
 </html>

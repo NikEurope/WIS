@@ -1,0 +1,238 @@
+
+<!-- Les événements JS   SUPPORT -  Les événements -->
+
+<!DOCTYPE html>
+
+<head>
+<meta charset="utf-8">
+<title>Les événements JS</title>
+</head>
+
+<!-- Les événements JS  -->
+
+<body>
+
+<!-- 1 onclick  -->
+
+<!-- <span onclick="alert('Hello !');">Cliquez-moi !</span>
+
+<br /><br /> -->
+
+<!-- Le mot-clé this - recuperer le texte de span -->
+<!-- <span onclick="alert('Voici le contenu de l\'élément que vous avez cliqué :\n\n' +
+this.innerHTML);">Cliquez-moi !</span>
+
+<br /><br /> -->
+
+
+
+<!-- 2 Retour sur le focus - recuperer objet de span-->
+
+<!-- un input classique  -->
+<!-- <input id="input" type="text" size=60" value="Cliquez ici !" onfocus="this.value='Appuyez maintenant sur votre touche de tabulation.';" onblur="this.value='Cliquez ici !';"/>
+<br /><br /> -->
+
+<!-- un input un lien -->
+<!-- <a href="#" onfocus="document.getElementById('input').value = 'Vous avez maintenant le focus sur le lien !';">Un lien</a>
+<br /><br /> -->
+
+
+<!-- Bloquer l'action par défaut de certains événements -->
+<!-- <a href="http://www.google.com" onclick="alert('Vous avez cliqué !');">Cliquez-moi !</a>
+<br /><br /> -->
+
+<!-- 2 eme Bloquer l'action -->
+<!-- <a href="http://www.siteduzero.com" onclick="alert('Vous avez cliqué !'); return false;">Cliquez-moi !</a>
+<br /><br /> -->
+
+
+
+
+
+
+
+<!-- 3 Les événements au travers du DOM -->
+
+<!-- Le DOM-0  Anciene -->
+<!-- <span id="clickme">Cliquez-moi !</span>
+
+<script>
+var element = document.getElementById('clickme');
+element.onclick = function() {
+alert("Vous m'avez cliqué !");
+};
+</script>
+<br /><br /> -->
+
+
+<!-- Le DOM-2 -->
+<!-- <span id="clickme">Cliquez-moi !</span>
+<script>
+var element = document.getElementById('clickme');
+element.addEventListener('click', function() {
+alert("Vous m'avez cliqué !");
+});
+</script>
+<br /><br /> -->
+
+
+<!-- création multiple d'événements identiques pour un même élément -->
+<!-- <span id="clickme">Cliquez-moi !</span>
+<script>
+var element = document.getElementById('clickme');
+// Premier événement click
+element.addEventListener('click', function() {
+alert("Et de un !");
+});
+// Deuxième événement click
+element.addEventListener('click', function() {
+alert("Et de deux !");
+});
+</script>
+<br /><br /> -->
+
+
+
+<!-- Les phases de capture et de bubbling  -->
+<!-- <div id="capt1">
+<span id="capt2">Cliquez-moi pour la phase de capture.</span>
+</div>
+<div id="boul1">
+<span id="boul2">Cliquez-moi pour la phase de bouillonnement.</span>
+</div>
+<script>
+var capt1 = document.getElementById('capt1'),
+capt2 = document.getElementById('capt2'),
+boul1 = document.getElementById('boul1'),
+boul2 = document.getElementById('boul2');
+capt1.addEventListener('click', function() {
+alert("L'événement du div vient de se déclencher.");
+}, true);
+capt2.addEventListener('click', function() {
+alert("L'événement du span vient de se déclencher.");
+}, true);
+boul1.addEventListener('click', function() {
+alert("L'événement du div vient de se déclencher.");
+}, false);
+boul2.addEventListener('click', function() {
+alert("L'événement du span vient de se déclencher.");
+}, false);
+</script>
+<br /><br /> -->
+
+
+
+
+
+<!-- 4 L'objet Event -->
+<!-- Les fonctionnalités de l'objetEvent -->
+<!-- <span id="clickme">Cliquez-moi !</span>
+<script>
+var clickme = document.getElementById('clickme');
+clickme.addEventListener('click', function(e) {
+e.target.innerHTML = 'Vous avez cliqué !';
+});
+</script> -->
+
+
+
+<!-- Récupérer l'élément à l'origine du déclenchement de l'événement -->
+<!-- <p id="result"></p>
+<div id="parent1">
+Parent
+<div id="child1">Enfant N°1</div>
+<div id="child2">Enfant N°2</div>
+</div>
+<script>
+var parent1 = document.getElementById('parent1'),
+result = document.getElementById('result');
+parent1.addEventListener('mouseover', function(e) {
+result.innerHTML = "L'élément déclencheur de l'événement \"mouseover\" possède l'ID: " + e.target.id;
+});
+</script> -->
+
+
+<!-- Récupérer l'élément en relation avec un événement de souris - coordones de souris - mousemove -->
+<!-- <div id="position"></div>
+<script>
+var position = document.getElementById('position');
+document.addEventListener('mousemove', function(e) {
+position.innerHTML = 'Position X : ' + e.clientX + 'px<br />Position Y : ' +
+e.clientY + 'px';
+});
+</script> -->
+
+
+
+<!-- 
+<p id="result"></p>
+<div id="parent1">
+Parent N°1<br /> Mouseover sur l'enfant
+<div id="child1">Enfant N°1</div>
+</div>
+<div id="parent2">
+Parent N°2<br /> Mouseout sur l'enfant
+<div id="child2">Enfant N°2</div>
+</div>
+<script>
+var child1 = document.getElementById('child1'),
+child2 = document.getElementById('child2'),
+result = document.getElementById('result');
+child1.addEventListener('mouseover', function(e) {
+result.innerHTML = "L'élément quitté juste avant que le curseur n'entre sur l'enfant n°1 est : " + e.relatedTarget.id;
+});
+child2.addEventListener('mouseout', function(e) {
+result.innerHTML = "L'élément survolé juste après que le curseur ait quitté l'enfant n°2 est : " + e.relatedTarget.id;
+});
+</script> -->
+
+
+
+<!-- 5 Récupérer les touches frappées -->
+<!-- Récupérer les touches frappées par l'utilisateur -->
+
+<p>
+<input id="field" type="text" />
+</p>
+<table>
+<tr>
+<td>keydown</td>
+<td id="down"></td>
+</tr>
+<tr>
+<td>keypress</td>
+<td id="press"></td>
+</tr>
+<tr>
+<td>keyup</td>
+<td id="up"></td>
+</tr>
+</table>
+<script>
+var field = document.getElementById('field'),
+down = document.getElementById('down'),
+press = document.getElementById('press'),
+up = document.getElementById('up');
+document.addEventListener('keydown', function(e) {
+down.innerHTML = e.keyCode;
+});
+document.addEventListener('keypress', function(e) {
+press.innerHTML = e.keyCode;
+});
+document.addEventListener('keyup', function(e) {
+up.innerHTML = e.keyCode;
+});
+</script>
+
+
+
+
+
+
+<!-- --- SCRIPT ---- -->
+
+<script src="html-dom.js"></script>
+
+
+</body>
+</html>

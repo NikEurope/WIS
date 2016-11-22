@@ -1,0 +1,50 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+<title>Essai DHTML</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript">
+<!--
+	
+	function ajout()
+	{
+		liste = document.getElementById("listecommissions");
+		texte = document.getElementById("course").value;
+
+    nouveauli = document.createElement("li");
+		//nouveauli.innerHTML = "du texte en plus";
+		nouveauli.innerHTML = texte;
+		
+		liste.appendChild(nouveauli);			
+	}
+	
+	function supprime()
+	{
+			liste = document.getElementById("listecommissions");			
+			
+			if (liste.lastChild.nodeType == 3)
+        liste.removeChild(liste.lastChild);			
+			
+			dernier = liste.lastChild;
+			if (dernier) // Corriger le code pour éviter cette une erreurquand il n'y a plus d'élément
+        liste.removeChild(dernier);	
+	}
+	
+//-->
+</script>
+
+</head>
+<body>
+
+<input type="text" id="course"><input type="button" value="OK" onclick="ajout()">
+<input type="button" value="supprime" onclick="supprime()">
+                
+<ul id="listecommissions">
+	<li>1kg de farine</li>
+	<li>un pack de lait</li>
+</ul>
+
+</body>
+</html>

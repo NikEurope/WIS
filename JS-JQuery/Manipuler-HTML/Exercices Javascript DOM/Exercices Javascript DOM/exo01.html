@@ -20,10 +20,14 @@
 <script type="text/javascript">
 
 
+// modifie avec la propriété innerHTML, en remplaçant le mot original en caractères droit par le mot corrigé
+
 function modif_paragraphe() {
     document.getElementById("premier").innerHTML = "Premier paragraphe corrigé.";
 }
 
+
+// modifie son attribut align, en lui affectant la valeur "center", à l'aide de la méthode setAttribute.
 
 function centrage_h1() {
     document.getElementsByTagName("h1")[0].setAttribute("class", "styleh1");
