@@ -13,9 +13,6 @@
 
 
 
-
-
-
 // 3 Les attributs  Via l'objet Element
 
 
