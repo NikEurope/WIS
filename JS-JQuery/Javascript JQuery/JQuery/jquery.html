@@ -1,0 +1,89 @@
+
+<!-- JQUERY HTML  -->
+
+<!--  REG JQUERY PDF -->
+
+<!DOCTYPE html>
+
+<head>
+<meta charset="utf-8">
+<title>JQUERY</title>
+<script src="jquery.js" ></script>
+<script src="initiation.jquery.js" ></script>
+</head>
+
+
+<!-- JQUERY HTML- -->
+
+<body>
+<center>
+<h1>JQUERY</h1></center>
+<br />
+<center><h2>Titre de niveau 2</h2>
+<p>Un paragraphe de texte</p>
+
+<a href="http://api.jquery.com">API jQuery</a><br>
+<a href="http://docs.jquery.com">Documentation jQuery</a><br>
+
+</center>
+<br /><br />
+
+<ul class="rouge">
+<li class="impair">premier élément de la liste à puces</li>
+</ul>
+<div>
+<ul class="bleu">
+<li class="impair">premier élément de la liste à puces</li>
+</ul>
+</div>
+<ol class="rouge">
+<li>premier élément de la liste numérotée</li>
+
+</ol>
+
+<br /><br />
+
+<!-- Manipulation de l'attribut class -->
+
+<title>Manipulation de l'attribut class</title>
+<style type="text/css">
+.rouge { color: red; }
+.vert { color: green; }
+.petit { font-size: 100%; }
+.grand {font-size: 250%; }
+</style>
+
+<span id="paul" class="vert grand">Paul</span>
+<span id="julia">Julia</span>
+<span id="eric" class="vert">Eric</span>
+<span id="kevin" >Kévin</span>
+<br /><br />
+
+
+<style type="text/css">
+#lumiere {
+width: 10px;
+height: 10px;
+background-color: white; }
+</style>
+<div id="lumiere"></div>
+<textarea id="target"></textarea>
+<script src="jquery.js"></script>
+<script>
+$(function() {
+$('#target').keydown(function(){
+$('#lumiere').css('background-color', 'green');
+});
+$('#target').keyup(function(){
+$('#lumiere').css('background-color', 'white');
+});
+});
+</script>
+
+
+
+
+
+
+</body>
+</html>

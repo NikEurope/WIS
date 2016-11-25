@@ -1,0 +1,21 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+  <script type="text/javascript" src="jquery-min.js"></script>
+  <meta charset="utf-8">  
+  <title>Afficher l'élément cliqué suivant un type</title>  
+  <script>
+    $(function() {
+      $("h3" ).click(function() {  
+        $("<p>Header : " + $(this).text() + "</p>").appendTo("body");  
+      }); 
+    });
+  </script>  
+</head>  
+<body>  
+  <p>Cliqué sur un élément de type header h3.</p>  
+  <h1>header1.</h1>  
+  <h2>header2.</h2>  
+  <h3>header3.</h3>  
+</body>  
+</html>  

@@ -1,0 +1,19 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+  <script type="text/javascript" src="jquery-min.js"></script>
+  <meta charset="utf-8">  
+  <title>JS Bin</title>  
+  <script>
+    $(function() {
+      $("input").keydown(function(event) {  
+        $("div").html(event.type + ": " +  event.which);  
+      });
+     });
+  </script>  
+</head>  
+<body>  
+  Entrer votre nom :  <input type="text">  
+  <div></div>  
+</body>  
+</html> 

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Gestion d'événement avec les propriétés des objets éléments</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<style>
+  form {
+      /* Pour le centrer dans la page */
+      margin: 0 auto;
+      width: 450px;
+      /* Pour voir les limites du formulaire */
+      padding: 1em;
+      border: 1px solid #CCC;
+      border-radius: 1em;
+  }
+  
+  form div + div {
+      margin-top: 1em;
+  }  
+
+  label {
+      /* Afin de s'assurer que toutes les étiquettes aient la même dimension et soient alignées correctement */
+      display: inline-block;
+      width: 110px;
+      text-align: right;
+  }
+
+  input, textarea {
+      /* Afin de s'assurer que tous les champs textuels utilisent la même police
+         Par défaut, textarea utilise une police à espacement constant */
+      font: 1em sans-serif;
+  
+      /* Pour donner la même dimension à tous les champs textuels */
+      width: 300px;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+  
+      /* Pour harmoniser l'apparence des bordures des champs textuels */
+      border: 1px solid #999;
+  }
+
+  input:focus, textarea:focus {
+      /* Afin de rehausser les éléments actifs */
+      border-color: #000;
+  }
+
+  textarea {
+      /* Pour aligner correctement les champs multilignes et leurs étiquettes */
+      vertical-align: top;
+  
+      /* Pour donner assez d'espace pour entrer du texte */
+      height: 5em;
+  
+      /* Pour permettre aux utilisateurs de redimensionner un champ textuel horizontalement
+         Cela ne marche pas avec tous les navigateurs  */
+      resize: vertical;
+  }
+
+  .button {
+      /* Pour positionner les boutons de la même manière que les champs textuels */
+      padding-left: 110px; /* même dimension que les étiquettes */
+  }
+  
+  button {
+      /* Cette marge représente approximativement le même espace
+         que celui entre les étiquettes et les champs textuels */
+      margin-left: .5em;
+  }
+  
+  .sex {
+      width: 20px;
+  }
+  
+  .country {
+      display: inline-block;
+      text-align: right;
+  }
+  
+  .tooltip {
+  	display: inline-block;
+  	margin: 5px 0px 5px 115px;
+  	padding: 2px 4px;
+  	border: 1px solid #555;
+  	background-color: #CCC;
+  	border-radius: 4px;
+  	border-color: rgba(191, 68, 68, 0.75);
+  	box-shadow: 0 0 8px rgba(191, 68, 68, 0.5);
+  }
+  
+</style>
+
+<script type="text/javascript">
+<!--
+	
+//-->
+</script>
+
+</head>
+<body>
+
+<form action="" id="formulaire">
+    <div>
+        <label class="form_col">Sexe :</label>
+        <input class="sex" name="sex" type="radio" value="H" />Homme
+        <input class="sex" name="sex" type="radio" value="F" />Femme
+        <span class="tooltip">Vous devez sélectionnez votre sexe</span>
+    </div>
+    <div>
+        <label for="lastname">Nom :</label>
+        <input type="text" id="lastname" name="user_lastname" />
+        <span class="tooltip">Votre nom doit comporter au moins 2 caractères</span>
+    </div>
+    <div>
+        <label for="firstname">Prénom :</label>
+        <input type="text" id="firstname" name="user_firstname" />
+        <span class="tooltip">Votre prénom doit comporter au moins 2 caractères</span>
+    </div>
+    <div>
+        <label for="age">Âge :</label>
+        <input type="text" id="age" name="user_age" />
+        <span class="tooltip">L'âge doit être compris entre 5 et 140</span>
+    </div>
+    <div>
+        <label class="country" for="country">Pays :</label>
+
+        <select id="country" name="user_country">
+        	<option value="none">Sélectionnez votre pays de résidence</option>
+        	<option value="en">Angleterre</option>
+        	<option value="us">États-Unis</option>
+        	<option value="fr">France</option>
+      	</select>
+        <span class="tooltip">Vous devez sélectionner un pays</span>
+    </div>
+    <div>
+        <label for="email">Courriel :</label>
+        <input type="email" id="email" name="user_email" />
+        <span class="tooltip">Votre email n'est pas valide</span>
+    </div>
+    <div>
+        <label for="email">Pseudo :</label>
+        <input type="text" id="login" name="user_login" />
+        <span class="tooltip">Votre pseudo doit comporter au moins 4 caractères</span>
+    </div>
+    <div>
+        <label for="password">Mot de passe :</label>
+        <input type="password" id="password" name="user_password" />
+        <span class="tooltip">Votre mot de passe doit comporter au moins 6 caractères</span>
+    </div>
+    <div>
+        <label for="password_confirm">Mot de passe (confirmation) :</label>
+        <input type="password" id="password_confirm" name="user_password_confirm" />
+        <span class="tooltip">Les mots de passe ne sont pas identiques</span>
+    </div>
+    
+    <div class="button">
+        <button type="submit">Valider</button>
+    </div>
+</form>
+
+</body>
+</html>

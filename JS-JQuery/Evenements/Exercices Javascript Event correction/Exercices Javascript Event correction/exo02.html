@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+<title>Changements de contenus</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript">
+<!--
+	function Init()
+	{
+	   // Avec addEventListener
+	   /*var imgs = document.getElementsByTagName('img');
+	   
+     imgs[0].addEventListener('mouseover', function() {
+        this.src='bouton_send_1.gif';
+        this.style.cursor='pointer';
+     }); 
+
+     imgs[0].addEventListener('mouseout', function() {
+        this.src='bouton_send_0.gif';
+        this.style.cursor='default';
+     });*/ 
+	}
+//-->
+</script>
+</head>
+<body onload="Init();">
+  <img src="bouton_send_0.gif" mouseover="this.src='bouton_send_1.gif';this.style.cursor='pointer';" onmouseout="this.src='bouton_send_0.gif';this.style.cursor='pointer';" onmouseout="this.src='bouton_send_0.gif';this.style.cursor='default';" width="135" height="45" />
+</body>
+</html>

@@ -1,0 +1,55 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+<title>Essai DHTML</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style type="text/css">
+<!-- 
+	#citation {position: absolute; top: 50px; left: 50px;} 
+	#citation p{position: relative; top: 0px; left: 0px; color: black; font-weight: bold;}
+-->
+</style>
+<script type="text/javascript">
+<!-- 
+
+	var couleur = 0;
+
+	function anime_paragraphe(element)
+	{
+		element.style.color = "rgb(" + String(couleur) + "%," + String(couleur) + "%," + String(couleur) + "%)";
+		if (couleur < 90) {
+      setTimeout(function() {anime_paragraphe(element)}, 100);
+      couleur++
+    }
+		if (couleur >= 90) {
+      zoneinfo = document.getElementById("info");
+      zoneinfo.innerHTML = "Stop&nbsp;!";
+    }	
+	}
+
+	function anime()
+	{
+		citation = document.getElementById("citation");
+		
+		for (i in citation.childNodes) {
+      if ((citation.childNodes[i].nodeName == "p") || (citation.childNodes[i].nodeName == "P"))
+			{
+			   anime_paragraphe(citation.childNodes[i]);
+			}
+		}
+	}
+	
+//-->
+</script>
+
+</head>
+<body>
+
+<input type="button" value="Lancer l'animation!" onclick="anime()">
+<div id="citation"><p>un essai de texte</p><p>avec un retour à la ligne</p><p>et un second&nbsp;!</p><p>C'est chouette, non&nbsp;?</p></div>
+<div><p id="info"></p></div>
+
+</body>
+</html>

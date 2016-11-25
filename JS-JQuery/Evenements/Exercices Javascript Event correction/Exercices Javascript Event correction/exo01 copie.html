@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+<title>Gestion d'événement avec les propriétés des objets éléments</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript">
+<!--
+	function Init()
+	{
+		var champ = document.getElementById("champsaisie");
+		var bouton_soumission = document.getElementById("soumet");
+		var bouton_raz = document.getElementById("raz");
+		
+		bouton_soumission.addEventListener('click', function() {
+		  alert("Le texte saisi est : " + champ.value);
+    });
+		
+		bouton_raz.addEventListener('click', function() {				
+	    champ.value = "Mot quelconque";
+    });
+	}
+//-->
+</script>
+
+</head>
+<body onload="Init()">
+
+<form action="" id="formulaire">
+	<input type="text" value="Mot quelconque" id="champsaisie">
+	<input type="button" id="soumet" value="Soumettre">
+	<input type="button" id="raz" value="Remise à zéro">
+</form>
+
+</body>
+</html>

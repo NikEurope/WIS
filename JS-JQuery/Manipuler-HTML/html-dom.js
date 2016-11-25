@@ -32,9 +32,9 @@
 
 // 4  La classe
 
-// document.getElementById('myColoredDiv').className = 'blue';
-// document.getElementById('orange').className = 'orange';
-// document.getElementById('myColoredDiv2').className = 'red1';
+document.getElementById('myColoredDiv').className = 'blue';
+document.getElementById('orange').className = 'orange';
+document.getElementById('myColoredDiv2').className = 'red1';
 
 
 
